@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Simple Typing Test</h1>
+            <div onclick="document.getElementById('id01').style.display='block'">
+                <i class="fa-solid fa-gear" id="star-icon"></i>
+            </div>
+
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content w3-animate-zoom w3-card-4">
+                    <header class="w3-container w3-teal">
+                        <span onclick="document.getElementById('id01').style.display='none'"
+                            class="w3-button w3-display-topright">&times;</span>
+                       <div class="modal-header">Setting</div> 
+                    </header>
+                    <div class="w3-container">
+                        <i class="fas fa-star"></i> test difficulty &nbsp;
+                        <div class="content">
+                            <div class="describe">
+                                Normal is the classic type test experiene. Experts fails the test if you submit (press
+                                space) an
+                                incorrect word. master fails if you press a single incorrect key(meaning you have to
+                                achieve
+                                100%
+                                accuracy).
+                            </div>
+
+                            <div class="difficulty-level">
+                                <div class="difficulty" style="background: #ccda46;">normal</div>
+                                <div class="difficulty">master</div>
+                                <div class="difficulty">expert</div>
+                            </div>
+                        </div>
+
+                     <div class="select-time">
+                        <i class='far fa-clock'></i> Select Time
+                            <div class="timer">
+                                <div class="time-second" style="background: #ccda46;">30</div>
+                                <div class="time-second">60</div>
+                                <div class="time-second">90</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header">
+            <div class="wpm">
+                <div id="wpm">WPM</div>
+                <div id="wpm-word">0</div>
+            </div>
+            <div class="cpm">
+                <div id="cpm">CPM</div>
+                <div id="cpm-word">0</div>
+            </div>
+
+            <div class="error">
+                <div id="error">Errors</div>
+                <div id="error-num">0</div>
+            </div>
+
+            <div class="time">
+                <div id="time">Time</div>
+                <div id="time-left">30s</div>
+            </div>
+
+            <div class="acc">
+                <div id="acc">%Accuracy</div>
+                <div id="acc-word">100</div>
+            </div>
+        </div>
+
+        <div class="quote">
+            Click the area below to start the game
+        </div>
+
+        <textarea class="input-text" oninput="processCurrentText()" onfocus="startGame()" id="normal"
+            placeholder="Start typing here ..."></textarea>
+
+        <button class="reset_button" onclick="reset()">Restart</button>
+    </div>
+
+</body>
+
+<script src="game.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+</html>
